@@ -42,7 +42,6 @@ public class ProductServiceImpl implements ProductService {
         newProduct.setDescription(newProductRequest.getDescription());
         newProduct.setPrice(newProductRequest.getPrice());
         newProduct.setBrand(newProductRequest.getBrand());
-        newProduct.setColor(newProductRequest.getColor());
         newProduct.setSize(newProductRequest.getSize());
         newProduct.setWeight(newProductRequest.getWeight());
         newProduct.setDimension(newProductRequest.getDimension());
@@ -67,7 +66,6 @@ public class ProductServiceImpl implements ProductService {
         product.setDescription(newProductRequest.getDescription() != null ? newProductRequest.getDescription() : product.getDescription());
         product.setPrice(newProductRequest.getPrice() != 0 ? newProductRequest.getPrice() : product.getPrice());
         product.setBrand(newProductRequest.getBrand() != null ? newProductRequest.getBrand() : product.getBrand());
-        product.setColor(newProductRequest.getColor() != null ? newProductRequest.getColor() : product.getColor());
         product.setSize(newProductRequest.getSize() != null ? newProductRequest.getSize() : product.getSize());
         product.setWeight(newProductRequest.getWeight() != null ? newProductRequest.getWeight() : product.getWeight());
         product.setDimension(newProductRequest.getDimension() != null ? newProductRequest.getDimension() : product.getDimension());

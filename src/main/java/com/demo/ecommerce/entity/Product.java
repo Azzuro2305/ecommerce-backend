@@ -31,27 +31,29 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private Set<Orders> orders;
 
-    private String name;
-    private String description;
-    private double price;
+    private String name; // combine all the product with same name and only show the quantity
+    private String description; // have
+    private double price; // have
 
     @ElementCollection
-    private Set<String> images;
+    private Set<String> images; // have
 
-    private String brand;
-    private String color;
-    private String size;
-    private String weight;
-    private String dimension;
+    private String brand; // have
+
+    @Enumerated(EnumType.STRING)
+    public ProductSize size;
+    public enum ProductSize {
+        S, M, L
+    }
+
+    private String weight; // need to add to frontend
+    private String dimension; // need to add to frontend
+    private double discountedPercentage; // have
 
     private Date createdDate;
     private Date updatedDate;
     private boolean isDeleted;
 
-    private boolean isFeatured;
-    private boolean isPromoted;
     private boolean isDiscounted;
-    private boolean isAvailable;
     private boolean isSoldOut;
-    private boolean isOutOfStock;
 }

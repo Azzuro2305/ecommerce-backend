@@ -1,7 +1,9 @@
 package com.demo.ecommerce.dto.Request;
 
+import com.demo.ecommerce.entity.Product;
 import lombok.Getter;
 import lombok.Setter;
+import org.modelmapper.internal.bytebuddy.implementation.bytecode.StackManipulation;
 
 import java.util.List;
 import java.util.Set;
@@ -17,8 +19,7 @@ public class NewProductRequest {
     private double price;
     private Set<String> images;
     private String brand;
-    private String color;
-    private String size;
+    private Product.ProductSize size;
     private String weight;
     private String dimension;
 }

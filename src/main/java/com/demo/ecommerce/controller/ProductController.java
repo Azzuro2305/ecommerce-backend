@@ -41,4 +41,9 @@ public class ProductController {
         HttpResponse<String> response = new HttpResponse<>("Product deleted successfully", HttpStatus.OK);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/sizes")
+    public Product.ProductSize[] getProductSizes() {
+        return Product.ProductSize.values();
+    }
 }

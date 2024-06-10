@@ -23,12 +23,7 @@ public class Category {
     @JoinColumn(name = "created_by")
     private Users users;
 
-//    @OneToMany(mappedBy = "category")  // check this again
-//    private Set<Product> products;
-
     private String name;
-    private String description;
-
     private Date createdDate;
     private Date updatedDate;
     private boolean isDeleted;
